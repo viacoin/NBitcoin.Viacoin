@@ -123,10 +123,10 @@ namespace NBitcoin.Viacoin
 			.SetMagic(0xdbb6c0fb)
 			.SetPort(port)
 			.SetRPCPort(9332)
-			.SetName("ltc-main")
-			.AddAlias("ltc-mainnet")
-			.AddAlias("litecoin-mainnet")
-			.AddAlias("litecoin-main")
+			.SetName("via-main")
+			.AddAlias("via-mainnet")
+			.AddAlias("viacoin-mainnet")
+			.AddAlias("viacoin-main")
 			.AddDNSSeeds(new[]
 			{
 				new DNSSeedData("loshan.co.uk", "seed-a.litecoin.loshan.co.uk"),
@@ -166,10 +166,10 @@ namespace NBitcoin.Viacoin
 			.SetMagic(0xf1c8d2fd)
 			.SetPort(port)
 			.SetRPCPort(19332)
-			.SetName("ltc-test")
-			.AddAlias("ltc-testnet")
-			.AddAlias("litecoin-test")
-			.AddAlias("litecoin-testnet")
+			.SetName("via-test")
+			.AddAlias("via-testnet")
+			.AddAlias("viacoin-test")
+			.AddAlias("viacoin-testnet")
 			.AddDNSSeeds(new[]
 			{
 				new DNSSeedData("litecointools.com", "testnet-seed.litecointools.com"),
@@ -208,7 +208,7 @@ namespace NBitcoin.Viacoin
 		private static void AssertRegistered()
 		{
 			if(_Mainnet == null)
-				throw new InvalidOperationException("You need to call LitecoinNetworks.Register() before using the litecoin networks");
+				throw new InvalidOperationException("You need to call ViacoinNetworks.Register() before using the viacoin networks");
 		}
 
 		private static Network _Testnet;
