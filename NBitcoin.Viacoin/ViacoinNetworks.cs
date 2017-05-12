@@ -5,7 +5,7 @@ using System;
 using System.Net;
 using System.Collections.Generic;
 
-namespace NBitcoin.Litecoin
+namespace NBitcoin.Viacoin
 {
 	public class Networks
 	{
@@ -115,11 +115,11 @@ namespace NBitcoin.Litecoin
 				HashGenesisBlock = new uint256("12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2"),
 				GetPoWHash = GetPoWHash
 			})
-			.SetBase58Bytes(Base58Type.PUBKEY_ADDRESS, new byte[] { 48 })
-			.SetBase58Bytes(Base58Type.SCRIPT_ADDRESS, new byte[] { 50 })
-			.SetBase58Bytes(Base58Type.SECRET_KEY, new byte[] { 176 })
-			.SetBase58Bytes(Base58Type.EXT_PUBLIC_KEY, new byte[] { 0x04, 0x88, 0xB2, 0x1E })
-			.SetBase58Bytes(Base58Type.SECRET_KEY, new byte[] { 0x04, 0x88, 0xAD, 0xE4 })
+			.SetBase58Bytes(Base58Type.PUBKEY_ADDRESS, new byte[] { 127 })
+			.SetBase58Bytes(Base58Type.SCRIPT_ADDRESS, new byte[] { 196 })
+			.SetBase58Bytes(Base58Type.SECRET_KEY, new byte[] { 255 })
+			.SetBase58Bytes(Base58Type.EXT_PUBLIC_KEY, new byte[] { 0x04, 0x35, 0x87, 0xCF })
+			.SetBase58Bytes(Base58Type.SECRET_KEY, new byte[] { 0x04, 0x35, 0x83, 0x94 })
 			.SetMagic(0xdbb6c0fb)
 			.SetPort(port)
 			.SetRPCPort(9332)
@@ -158,9 +158,9 @@ namespace NBitcoin.Litecoin
 				HashGenesisBlock = new uint256("f5ae71e26c74beacc88382716aced69cddf3dffff24f384e1808905e0188f68f"),
 				GetPoWHash = GetPoWHash
 			})
-			.SetBase58Bytes(Base58Type.PUBKEY_ADDRESS, new byte[] { 111 })
-			.SetBase58Bytes(Base58Type.SCRIPT_ADDRESS, new byte[] { 58 })
-			.SetBase58Bytes(Base58Type.SECRET_KEY, new byte[] { 239 })
+			.SetBase58Bytes(Base58Type.PUBKEY_ADDRESS, new byte[] { 127 })
+			.SetBase58Bytes(Base58Type.SCRIPT_ADDRESS, new byte[] { 196 })
+			.SetBase58Bytes(Base58Type.SECRET_KEY, new byte[] { 255 })
 			.SetBase58Bytes(Base58Type.EXT_PUBLIC_KEY, new byte[] { 0x04, 0x35, 0x87, 0xCF })
 			.SetBase58Bytes(Base58Type.SECRET_KEY, new byte[] { 0x04, 0x35, 0x83, 0x94 })
 			.SetMagic(0xf1c8d2fd)
