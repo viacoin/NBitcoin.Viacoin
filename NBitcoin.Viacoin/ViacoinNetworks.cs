@@ -99,7 +99,7 @@ namespace NBitcoin.Viacoin
 			NetworkBuilder builder = new NetworkBuilder();
 			_Mainnet = builder.SetConsensus(new Consensus()
 			{
-				SubsidyHalvingInterval = 840000,
+				SubsidyHalvingInterval = 657000,
 				MajorityEnforceBlockUpgrade = 750,
 				MajorityRejectBlockOutdated = 950,
 				MajorityWindow = 1000,
@@ -142,7 +142,7 @@ namespace NBitcoin.Viacoin
 			port = 25223;
 			_Testnet = builder.SetConsensus(new Consensus()
 			{
-				SubsidyHalvingInterval = 840000,
+				SubsidyHalvingInterval = 657000,
 				MajorityEnforceBlockUpgrade = 51,
 				MajorityRejectBlockOutdated = 75,
 				MajorityWindow = 1000,
