@@ -95,7 +95,7 @@ namespace NBitcoin.Viacoin
 
 		public static void Register()
 		{
-			var port = 9333;
+			var port = 5223;
 			NetworkBuilder builder = new NetworkBuilder();
 			_Mainnet = builder.SetConsensus(new Consensus()
 			{
@@ -139,7 +139,7 @@ namespace NBitcoin.Viacoin
 			.BuildAndRegister();
 
 			builder = new NetworkBuilder();
-			port = 19335;
+			port = 25223;
 			_Testnet = builder.SetConsensus(new Consensus()
 			{
 				SubsidyHalvingInterval = 840000,
