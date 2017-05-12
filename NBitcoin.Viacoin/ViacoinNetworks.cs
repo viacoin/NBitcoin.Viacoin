@@ -129,11 +129,10 @@ namespace NBitcoin.Viacoin
 			.AddAlias("viacoin-main")
 			.AddDNSSeeds(new[]
 			{
-				new DNSSeedData("loshan.co.uk", "seed-a.litecoin.loshan.co.uk"),
-				new DNSSeedData("thrasher.io", "dnsseed.thrasher.io"),
-				new DNSSeedData("litecointools.com", "dnsseed.litecointools.com"),
-				new DNSSeedData("litecoinpool.org", "dnsseed.litecoinpool.org"),
-				new DNSSeedData("koin-project.com", "dnsseed.koin-project.com"),
+				new DNSSeedData("viacoin.net", "seed.viacoin.net"),
+				new DNSSeedData("barbatos.fr", "viaseeder.barbatos.fr"),
+				new DNSSeedData("bootstap.viacoin.net", "mainnet.viacoin.net"),
+				new DNSSeedData("zzy.su", "seed.zzy.su"),
 			})
 			.AddSeeds(ToSeed(pnSeed6_main))
 			.SetGenesis(new Block(Encoders.Hex.DecodeData("010000000000000000000000000000000000000000000000000000000000000000000000d9ced4ed1130f7b7faad9be25323ffafa33232a17c3edf6cfd97bee6bafbdd97b9aa8e4ef0ff0f1ecd513f7c0101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff4804ffff001d0104404e592054696d65732030352f4f63742f32303131205374657665204a6f62732c204170706c65e280997320566973696f6e6172792c2044696573206174203536ffffffff0100f2052a010000004341040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9ac00000000")))
@@ -172,9 +171,8 @@ namespace NBitcoin.Viacoin
 			.AddAlias("viacoin-testnet")
 			.AddDNSSeeds(new[]
 			{
-				new DNSSeedData("litecointools.com", "testnet-seed.litecointools.com"),
-				new DNSSeedData("loshan.co.uk", "seed-b.litecoin.loshan.co.uk"),
-				new DNSSeedData("thrasher.io", "dnsseed-testnet.thrasher.io"),
+				new DNSSeedData("bootstrap-testnet.viacoin.net", "testnet.viacoin.net"),
+				new DNSSeedData("viacoin.net", "seed-testnet.viacoin.net"),
 			})
 			.AddSeeds(ToSeed(pnSeed6_test))
 			.SetGenesis(new Block(Encoders.Hex.DecodeData("010000000000000000000000000000000000000000000000000000000000000000000000d9ced4ed1130f7b7faad9be25323ffafa33232a17c3edf6cfd97bee6bafbdd97f6028c4ef0ff0f1e38c3f6160101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff4804ffff001d0104404e592054696d65732030352f4f63742f32303131205374657665204a6f62732c204170706c65e280997320566973696f6e6172792c2044696573206174203536ffffffff0100f2052a010000004341040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9ac00000000")))
