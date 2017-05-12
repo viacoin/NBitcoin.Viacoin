@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NBitcoin.Litecoin\NBitcoin.Litecoin.csproj" />
+    <ProjectReference Include="..\NBitcoin.Viacoin\NBitcoin.Viacoin.csproj" />
   </ItemGroup>
 
   <ItemGroup>

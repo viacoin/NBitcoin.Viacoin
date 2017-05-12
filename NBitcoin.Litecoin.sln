@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBitcoin.Litecoin", "NBitcoin.Litecoin\NBitcoin.Litecoin.csproj", "{4C86CAE8-B3CE-4EEB-8C7C-B042F9EC0503}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBitcoin.Viacoin", "NBitcoin.Viacoin\NBitcoin.Viacoin.csproj", "{4C86CAE8-B3CE-4EEB-8C7C-B042F9EC0503}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBitcoin.Litecoin.Tests", "NBitcoin.Litecoin.Tests\NBitcoin.Litecoin.Tests.csproj", "{82D473C3-0B33-40DF-B1B3-0FC351ED3982}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBitcoin.Viacoin.Tests", "NBitcoin.Viacoin.Tests\NBitcoin.Viacoin.Tests.csproj", "{82D473C3-0B33-40DF-B1B3-0FC351ED3982}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0C4E3282-6405-4C92-A385-54A3BAC6F7BF}"
 EndProject
