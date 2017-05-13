@@ -43,7 +43,7 @@ namespace NBitcoin.Viacoin
 				RuleChangeActivationThreshold = 37800,
 				MinerConfirmationWindow = 50400,
 				CoinbaseMaturity = 100,
-				HashGenesisBlock = new uint256("12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2"),
+				HashGenesisBlock = new uint256("4e9b54001f9976049830128ec0331515eaabe35a70970d79971da1539a400ba1"),
 				GetPoWHash = GetPoWHash
 			})
 			.SetBase58Bytes(Base58Type.PUBKEY_ADDRESS, new byte[] { 127 })
