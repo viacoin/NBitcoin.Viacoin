@@ -3,7 +3,7 @@
 <img src="http://segwit.co/static/public/images/logo.png" width="100">
 
 This project allows NBitcoin to support Viacoin.
-NBitcoin.Viacoin is Viacoin libraty for the .NET platform. It implements all most relevant Bitcoin
+NBitcoin.Viacoin is Viacoin library for the .NET platform. It implements all most relevant Bitcoin
 Improvement Proposals (BIPs). It provides also low level access to Viacoin primitives so you can easily build
 your application on top of it.
 
