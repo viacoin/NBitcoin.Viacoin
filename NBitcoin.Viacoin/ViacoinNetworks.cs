@@ -44,7 +44,8 @@ namespace NBitcoin.Viacoin
 				MinerConfirmationWindow = 50400,
 				CoinbaseMaturity = 100,
 				HashGenesisBlock = new uint256("4e9b54001f9976049830128ec0331515eaabe35a70970d79971da1539a400ba1"),
-				GetPoWHash = GetPoWHash
+				GetPoWHash = GetPoWHash,
+                ViacoinWorkCalculation = true
 			})
 			.SetBase58Bytes(Base58Type.PUBKEY_ADDRESS, new byte[] { 127 })
 			.SetBase58Bytes(Base58Type.SCRIPT_ADDRESS, new byte[] { 196 })
@@ -86,7 +87,8 @@ namespace NBitcoin.Viacoin
 				MinerConfirmationWindow = 21600,
 				CoinbaseMaturity = 100,
 				HashGenesisBlock = new uint256("f5ae71e26c74beacc88382716aced69cddf3dffff24f384e1808905e0188f68f"),
-				GetPoWHash = GetPoWHash
+				GetPoWHash = GetPoWHash,
+                ViacoinWorkCalculation = true
 			})
 			.SetBase58Bytes(Base58Type.PUBKEY_ADDRESS, new byte[] { 127 })
 			.SetBase58Bytes(Base58Type.SCRIPT_ADDRESS, new byte[] { 196 })
