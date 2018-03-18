@@ -1,20 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.3;net45</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.0;netstandard1.3</TargetFrameworks>
 	<PackageId>NBitcoin.Viacoin</PackageId>
-	<PackageVersion>1.0.0.4</PackageVersion>
-	<Authors>Nicolas Dorier and Viacoin Dev-Team(hotshot)</Authors>
-	<Description>Networks Instances for Viacoin</Description>
+	<PackageVersion>1.0.0.9</PackageVersion>
+	<Authors>Nicolas Dorier and Viacoin-Dev Team (fixes)</Authors>
+	<Description>Networks instances for Viacoin</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Copyright>Copyright 2017 (c) Metaco SA. All rights reserved.</Copyright>
-    <PackageTags>viacoin</PackageTags>
-    <AssemblyVersion>1.0.0.4</AssemblyVersion>
-    <FileVersion>1.0.0.4</FileVersion>
+	<PackageTags>Viacoin</PackageTags>
+	<AssemblyVersion>1.0.0.9</AssemblyVersion>
+	<FileVersion>1.0.0.9</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NBitcoin" Version="3.0.2.26" />
+    <PackageReference Include="NBitcoin" Version="4.0.0.51" />
   </ItemGroup>
 
 </Project>
