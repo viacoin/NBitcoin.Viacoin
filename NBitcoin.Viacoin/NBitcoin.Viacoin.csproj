@@ -3,14 +3,14 @@
   <PropertyGroup>
     <TargetFrameworks>netcoreapp2.0;netstandard1.3</TargetFrameworks>
 	<PackageId>NBitcoin.Viacoin</PackageId>
-	<PackageVersion>1.0.0.9</PackageVersion>
+	<PackageVersion>1.0.1.0</PackageVersion>
 	<Authors>Nicolas Dorier and Viacoin-Dev Team (fixes)</Authors>
 	<Description>Networks instances for Viacoin</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Copyright>Copyright 2017 (c) Metaco SA. All rights reserved.</Copyright>
 	<PackageTags>Viacoin</PackageTags>
-	<AssemblyVersion>1.0.0.9</AssemblyVersion>
-	<FileVersion>1.0.0.9</FileVersion>
+	<AssemblyVersion>1.0.1.0</AssemblyVersion>
+	<FileVersion>1.0.1.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

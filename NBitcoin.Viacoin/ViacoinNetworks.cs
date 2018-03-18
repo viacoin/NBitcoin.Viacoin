@@ -100,10 +100,10 @@ namespace NBitcoin.Viacoin
 				PowTargetSpacing = TimeSpan.FromSeconds(1 * 24),
 				PowAllowMinDifficultyBlocks = true,
 				PowNoRetargeting = false,
-				RuleChangeActivationThreshold = 9450,
-				MinerConfirmationWindow = 21600,
+				RuleChangeActivationThreshold = 2700,
+				MinerConfirmationWindow = 3600,
 				CoinbaseMaturity = 100,
-				HashGenesisBlock = new uint256("f5ae71e26c74beacc88382716aced69cddf3dffff24f384e1808905e0188f68f"),
+				HashGenesisBlock = new uint256("770aa712aa08fdcbdecc1c8df1b3e2d4e17a7cf6e63a28b785b32e74c96cb27d"),
 				GetPoWHash = GetPoWHash,
                 LitecoinWorkCalculation = true
 			})
