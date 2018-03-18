@@ -25,7 +25,7 @@ namespace NBitcoin.Viacoin
 		static Tuple<byte[], int>[] pnSeed6_test = {
 	Tuple.Create(new byte[]{0xfd,0x87,0xd8,0x7e,0xeb,0x43,0x8c,0x95,0x7f,0x9b,0x49,0x18,0xd4,0xca,0x06,0x11}, 25223),
 };
-		[Obsolete("Use EnsureRegistered instead")]
+		//[Obsolete("Use EnsureRegistered instead")]
 		public static void Register()
 		{
 			EnsureRegistered();
@@ -49,7 +49,7 @@ namespace NBitcoin.Viacoin
 				MajorityEnforceBlockUpgrade = 15000,
 				MajorityRejectBlockOutdated = 19000,
 				MajorityWindow = 20000,
-				BIP34Hash = new uint256("0x0"),
+				BIP34Hash = new uint256("4e9b54001f9976049830128ec0331515eaabe35a70970d79971da1539a400ba1"),
 				PowLimit = new Target(new uint256("000001ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff")),
 				PowTargetTimespan = TimeSpan.FromSeconds(14 * 24 * 60 * 60),
 				PowTargetSpacing = TimeSpan.FromSeconds(1 * 24),
@@ -62,11 +62,11 @@ namespace NBitcoin.Viacoin
 				GetPoWHash = GetPoWHash,
                 LitecoinWorkCalculation = true
 			})
-			.SetBase58Bytes(Base58Type.PUBKEY_ADDRESS, new byte[] { 127 })
-			.SetBase58Bytes(Base58Type.SCRIPT_ADDRESS, new byte[] { 196 })
-			.SetBase58Bytes(Base58Type.SECRET_KEY, new byte[] { 255 })
-			.SetBase58Bytes(Base58Type.EXT_PUBLIC_KEY, new byte[] { 0x04, 0x35, 0x87, 0xCF })
-			.SetBase58Bytes(Base58Type.EXT_SECRET_KEY, new byte[] { 0x04, 0x35, 0x83, 0x94 })
+			.SetBase58Bytes(Base58Type.PUBKEY_ADDRESS, new byte[] { 71 })
+			.SetBase58Bytes(Base58Type.SCRIPT_ADDRESS, new byte[] { 33 })
+			.SetBase58Bytes(Base58Type.SECRET_KEY, new byte[] { 199 })
+			.SetBase58Bytes(Base58Type.EXT_PUBLIC_KEY, new byte[] { 0x04, 0x88, 0xB2, 0x1E })
+			.SetBase58Bytes(Base58Type.EXT_SECRET_KEY, new byte[] { 0x04, 0x88, 0xAD, 0xE4 })
             .SetBech32(Bech32Type.WITNESS_PUBKEY_ADDRESS, Encoders.Bech32("via"))
             .SetBech32(Bech32Type.WITNESS_SCRIPT_ADDRESS, Encoders.Bech32("via"))
 			.SetMagic(0xcbc6680f)
