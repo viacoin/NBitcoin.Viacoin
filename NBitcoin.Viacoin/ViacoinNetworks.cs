@@ -4,6 +4,8 @@ using NBitcoin.Protocol;
 using System;
 using System.Net;
 using System.Collections.Generic;
+using NBitcoin.RPC;
+using System.IO;
 
 namespace NBitcoin.Viacoin
 {
@@ -23,8 +25,21 @@ namespace NBitcoin.Viacoin
 		static Tuple<byte[], int>[] pnSeed6_test = {
 	Tuple.Create(new byte[]{0xfd,0x87,0xd8,0x7e,0xeb,0x43,0x8c,0x95,0x7f,0x9b,0x49,0x18,0xd4,0xca,0x06,0x11}, 25223),
 };
-
+		//[Obsolete("Use EnsureRegistered instead")]
 		public static void Register()
+		{
+			EnsureRegistered();
+		}
+		public static void EnsureRegistered()
+		{
+			if(_LazyRegistered.IsValueCreated)
+				return;
+			// This will cause RegisterLazy to evaluate
+			new Lazy<object>[] { _LazyRegistered }.Select(o => o.Value != null).ToList();
+		}
+		static Lazy<object> _LazyRegistered = new Lazy<object>(RegisterLazy, false);
+
+		private static object RegisterLazy()
 		{
 			var port = 5223;
 			NetworkBuilder builder = new NetworkBuilder();
@@ -34,7 +49,7 @@ namespace NBitcoin.Viacoin
 				MajorityEnforceBlockUpgrade = 15000,
 				MajorityRejectBlockOutdated = 19000,
 				MajorityWindow = 20000,
-				BIP34Hash = new uint256("0x0"),
+				BIP34Hash = new uint256("4e9b54001f9976049830128ec0331515eaabe35a70970d79971da1539a400ba1"),
 				PowLimit = new Target(new uint256("000001ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff")),
 				PowTargetTimespan = TimeSpan.FromSeconds(14 * 24 * 60 * 60),
 				PowTargetSpacing = TimeSpan.FromSeconds(1 * 24),
@@ -45,13 +60,13 @@ namespace NBitcoin.Viacoin
 				CoinbaseMaturity = 100,
 				HashGenesisBlock = new uint256("4e9b54001f9976049830128ec0331515eaabe35a70970d79971da1539a400ba1"),
 				GetPoWHash = GetPoWHash,
-                ViacoinWorkCalculation = true
+                LitecoinWorkCalculation = true
 			})
-			.SetBase58Bytes(Base58Type.PUBKEY_ADDRESS, new byte[] { 127 })
-			.SetBase58Bytes(Base58Type.SCRIPT_ADDRESS, new byte[] { 196 })
-			.SetBase58Bytes(Base58Type.SECRET_KEY, new byte[] { 255 })
-			.SetBase58Bytes(Base58Type.EXT_PUBLIC_KEY, new byte[] { 0x04, 0x35, 0x87, 0xCF })
-			.SetBase58Bytes(Base58Type.EXT_SECRET_KEY, new byte[] { 0x04, 0x35, 0x83, 0x94 })
+			.SetBase58Bytes(Base58Type.PUBKEY_ADDRESS, new byte[] { 71 })
+			.SetBase58Bytes(Base58Type.SCRIPT_ADDRESS, new byte[] { 33 })
+			.SetBase58Bytes(Base58Type.SECRET_KEY, new byte[] { 199 })
+			.SetBase58Bytes(Base58Type.EXT_PUBLIC_KEY, new byte[] { 0x04, 0x88, 0xB2, 0x1E })
+			.SetBase58Bytes(Base58Type.EXT_SECRET_KEY, new byte[] { 0x04, 0x88, 0xAD, 0xE4 })
             .SetBech32(Bech32Type.WITNESS_PUBKEY_ADDRESS, Encoders.Bech32("via"))
             .SetBech32(Bech32Type.WITNESS_SCRIPT_ADDRESS, Encoders.Bech32("via"))
 			.SetMagic(0xcbc6680f)
@@ -85,12 +100,12 @@ namespace NBitcoin.Viacoin
 				PowTargetSpacing = TimeSpan.FromSeconds(1 * 24),
 				PowAllowMinDifficultyBlocks = true,
 				PowNoRetargeting = false,
-				RuleChangeActivationThreshold = 9450,
-				MinerConfirmationWindow = 21600,
+				RuleChangeActivationThreshold = 2700,
+				MinerConfirmationWindow = 3600,
 				CoinbaseMaturity = 100,
-				HashGenesisBlock = new uint256("f5ae71e26c74beacc88382716aced69cddf3dffff24f384e1808905e0188f68f"),
+				HashGenesisBlock = new uint256("770aa712aa08fdcbdecc1c8df1b3e2d4e17a7cf6e63a28b785b32e74c96cb27d"),
 				GetPoWHash = GetPoWHash,
-                ViacoinWorkCalculation = true
+                LitecoinWorkCalculation = true
 			})
 			.SetBase58Bytes(Base58Type.PUBKEY_ADDRESS, new byte[] { 127 })
 			.SetBase58Bytes(Base58Type.SCRIPT_ADDRESS, new byte[] { 196 })
@@ -114,6 +129,8 @@ namespace NBitcoin.Viacoin
 			.AddSeeds(ToSeed(pnSeed6_test))
 			.SetGenesis(new Block(Encoders.Hex.DecodeData("010000000000000000000000000000000000000000000000000000000000000000000000d9ced4ed1130f7b7faad9be25323ffafa33232a17c3edf6cfd97bee6bafbdd97f6028c4ef0ff0f1e38c3f6160101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff4804ffff001d0104404e592054696d65732030352f4f63742f32303131205374657665204a6f62732c204170706c65e280997320566973696f6e6172792c2044696573206174203536ffffffff0100f2052a010000004341040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9ac00000000")))
 			.BuildAndRegister();
+			
+			return new object();
 		}
 
 		static uint256 GetPoWHash(BlockHeader header)
