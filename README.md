@@ -1,3 +1,4 @@
+# Depricated --> moved to https://github.com/viacoin/NBitcoin/tree/master/NBitcoin.Altcoins
 # NBitcoin.Viacoin
 
 <img src="http://segwit.co/static/public/images/logo.png" width="100">
